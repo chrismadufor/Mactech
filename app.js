@@ -9,7 +9,11 @@ menuIcon.addEventListener('click', function() {
     } else {
         slideOutMenu.style.opacity = "1";
         slideOutMenu.style.pointerEvents = "auto";
-        menuIcon.style.color = 'white'
+        // menuIcon.style.color = 'white'
+
     }
 
 })
+function lockScroll() {
+    document.body.classList.toggle('lock-scroll');
+}

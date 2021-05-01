@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300;400;700&family=Rubik:wght@300;400;500;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300;400;700&family=Rubik:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -74,6 +74,7 @@ header {
   height: 70px;
   font-weight: 500;
   box-shadow: 5px 0 10px #91a8ac;
+  z-index: 100;
 }
 .logo-container h3 {
   font-size: 16px;
@@ -122,9 +123,14 @@ nav ul li:hover {
 }
 
 /* ------SLIDEOUT MENU STYLES------- */
+/* lock-scroll is to prevent the body from scrolling while the nav-bar is open */
+.lock-scroll {
+  overflow: hidden;
+}
 #menu-icon {
   font-size: 24px;
   z-index: 100;
+  cursor: pointer;
 }
 #slideout-menu {
   position: fixed;
@@ -142,7 +148,7 @@ nav ul li:hover {
   float: right;
   width: 70%;
   background-color: #ce1c1c;
-  padding: 20% 10% 0;
+  padding: 10% 10% 0;
   margin: 0;
   list-style: none;
   text-transform: uppercase;
@@ -320,6 +326,7 @@ section {
 }
 section p {
   font-size: 14px;
+  line-height: 24px;
 }
 section h2 {
   text-align: center;
@@ -337,7 +344,7 @@ section h2 {
   border: 0;
   border-radius: 5px;
   max-width: 200px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .hero-section {
   width: 100%;
@@ -416,14 +423,20 @@ section img {
   text-align: center;
   width: 95%;
   max-width: 375px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+  margin-bottom: 30px;
+  padding-bottom: 10px;
   border-radius: 5px;
   background-color: white;
 }
+/* .school-item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
 .school-item h4 {
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .school-item p {
   font-size: 12px;
@@ -432,15 +445,15 @@ section img {
   text-justify: distribute;
 }
 .school-item img {
-  height: 150px;
+  height: 200px;
 }
 .ready p {
   width: 85%;
   margin: 16px auto;
-  text-align: left;
+  text-align: center;
 }
 .program-item {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin-bottom: 30px;
   background-color: white;
   border-radius: 5px;
@@ -448,6 +461,10 @@ section img {
 .program-text {
   width: 90%;
   margin: 10px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .program-text h4 {
   text-align: center;
@@ -460,23 +477,23 @@ section img {
   font-size: 22px;
 }
 .testimonials-container {
-  width: 95%;
+  width: 94%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .testimonials-box {
   background-color: white;
   border-radius: 5px;
-  width: 85%;
+  width: 90%;
   min-width: 225px;
-  max-width: 800px;
+  max-width: 540px;
   /* min-width: 360px; */
   position: relative;
   padding: 20px 20px 20px 80px;
-  margin: 0 0 50px 50px;
+  margin: 0 0 50px 70px;
   display: flex;
 }
 .testimonials-box img {
@@ -489,10 +506,11 @@ section img {
   border-radius: 5px;
   box-shadow: 2px 2px 5px #91a8ac;
 }
-/* .testimonials-text {
-  background-color: white;
-  width: 80%;
-} */
+.testimonials-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .testimonials-box p {
   font-size: 12px;
 }
@@ -500,6 +518,7 @@ section img {
   text-align: center;
   display: flex;
   justify-content: flex-end;
+  margin-right: 20px;
 }
 
 /* ------MEDIA QUERIES------ */
@@ -559,7 +578,7 @@ section img {
     padding-left: 30px;
   }
   section img {
-    height: 350px;
+    /* height: 350px; */
   }
 }
 /* -----This breakpoint- 728px is for the sign-in and sign-up pages----- */
@@ -650,6 +669,9 @@ section img {
     height: 40px;
     padding-left: 36px;
   }
+  section {
+    width: 90%;
+  }
   section h2 {
     font-size: 32px;
   }
@@ -661,7 +683,7 @@ section img {
     font-size: 16px;
   }
   .red-btn {
-    margin-top: 20px;
+    margin-top: 30px;
     height: 50px;
   }
   section.hack {
@@ -669,6 +691,7 @@ section img {
     justify-content: flex-start;
     margin-top: 80px;
     padding: 0;
+    max-height: 450px;
   }
   .fa-check-circle {
     font-size: 16px;
@@ -695,7 +718,7 @@ section img {
     margin-left: 0;
   }
   .school-item img {
-    height: 200px;
+    height: 250px;
   }
   .school-item h4,
   .program-item h4 {
@@ -708,7 +731,7 @@ section img {
   .school-item {
     width: 47%;
     max-width: 350px;
-    height: 450px;
+    padding-bottom: 20px;
     margin-bottom: 40px;
   }
   .school-container {
@@ -724,37 +747,55 @@ section img {
     padding-top: 0;
     margin-top: 30px;
   }
+  section.skill img {
+    height: 350px;
+  }
   .program-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
     margin-top: 50px;
   }
   .program-item {
     display: flex;
     flex-direction: row;
-    width: 48%;
-    /* height: 470px; */
+    /* width: 48%; */
+    width: 100%;
     padding-bottom: 0;
+    margin-bottom: 50px;
+    max-height: 370px;
   }
   .program-item img {
-    width: 40%;
+    width: 30%;
+    max-width: 290px;
     height: 100%;
-
-    min-height: 470px;
+    min-height: 370px;
   }
   .program-text {
-    padding: 10px 10px;
+    padding: 10px 5%;
   }
   .program-text p {
     margin: 10px auto;
   }
+  .testimonials .testimonials-box {
+    padding-left: 100px;
+    padding-right: 40px;
+  }
   .testimonials-box p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .testimonials-box {
-    width: 90%;
+    height: 300px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 120px;
+  }
+  .testimonials-box img {
+    top: 25%;
+    height: 150px;
   }
   .testimonials h2 {
     font-size: 32px;
@@ -802,6 +843,9 @@ section img {
     max-width: 100%;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+  .school-item {
+    width: 23%;
   }
   section h2 {
     font-size: 36px;
