@@ -76,9 +76,11 @@ header {
   box-shadow: 5px 0 10px #91a8ac;
   z-index: 100;
 }
-.logo-container h3 {
-  font-size: 16px;
-  margin: 0;
+.logo-container img {
+  width: 180px;
+}
+.logo-container {
+  width: 35%;
 }
 nav {
   display: none;
@@ -107,10 +109,10 @@ nav ul li:hover {
   font-weight: bold;
 }
 .nav-button {
-  height: 50px;
+  height: 40px;
   min-width: 130px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #ce1c1c;
   color: #fff;
   margin-left: 20px;
@@ -351,9 +353,13 @@ section h2 {
   height: 70vh;
   min-height: 450px;
   max-height: 700px;
-  position: relative;
-  margin-bottom: 30px;
-  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  /* margin-bottom: 30px; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(../img/hero.jpg);
 }
 .hero-section img {
   width: 100%;
@@ -367,9 +373,9 @@ section h2 {
   color: black;
   border-radius: 5px;
   padding: 30px 15px 40px;
-  position: absolute;
+  /* position: absolute;
   bottom: -30px;
-  left: 8%;
+  left: 5%; */
   width: 80%;
   max-width: 600px;
   max-height: 500px;
@@ -381,20 +387,20 @@ section h2 {
 .hero-box input {
   height: 30px;
   background-color: transparent;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 .search-box {
   position: relative;
 }
 .search-icon {
   position: absolute;
-  top: 16px;
+  top: 15px;
   font-size: 14px;
   right: 20px;
 }
 section.hack {
   padding-top: 0;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .hack p {
   width: 95%;
@@ -429,11 +435,10 @@ section img {
   border-radius: 5px;
   background-color: white;
 }
-/* .school-item-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-} */
+.school-item button {
+  width: 120px;
+}
+
 .school-item h4 {
   font-size: 14px;
   margin-bottom: 10px;
@@ -446,6 +451,10 @@ section img {
 }
 .school-item img {
   height: 200px;
+}
+.ready,
+.skill {
+  border-radius: 5px;
 }
 .ready p {
   width: 85%;
@@ -473,11 +482,14 @@ section img {
   padding-top: 0;
   margin-top: 0px;
 }
+.testimonials {
+  padding: 0;
+}
 .testimonials h2 {
   font-size: 22px;
 }
 .testimonials-container {
-  width: 94%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -489,7 +501,7 @@ section img {
   border-radius: 5px;
   width: 90%;
   min-width: 225px;
-  max-width: 540px;
+  max-width: 600px;
   /* min-width: 360px; */
   position: relative;
   padding: 20px 20px 20px 80px;
@@ -532,11 +544,10 @@ section img {
     font-size: 28px;
   }
   .logo-container {
-    width: 300px;
+    /* width: 300px; */
   }
   .logo-container img {
-    width: 100%;
-    height: 80px;
+    width: 200px;
   }
   #slideout-menu ul li {
     margin: 20px 0;
@@ -688,32 +699,38 @@ section img {
   }
   section.hack {
     display: flex;
-    justify-content: flex-start;
-    margin-top: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
     padding: 0;
-    max-height: 450px;
+    /* max-height: 450px; */
   }
   .fa-check-circle {
     font-size: 16px;
   }
-  section.hack img {
-    width: 30%;
-    height: 450px;
-    max-width: 300px;
-    margin-right: 50px;
+  .hack {
+    max-height: 600px;
   }
-  section.hack div {
+  .hack img {
+    display: block;
+    width: 30%;
+    height: 100%;
+    min-height: 540px;
+    max-height: 700px;
+    margin-right: 20px;
+  }
+  .hack-text {
+    width: 68%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 10px 0 20px 0;
+    /* padding: 30px 0 30px 0; */
   }
-  section.hack div * {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  hack-text * {
+    margin: 0;
   }
-  section.hack div p {
+  hack-text p {
     text-align: left;
     margin-left: 0;
   }
@@ -773,6 +790,7 @@ section img {
     max-width: 290px;
     height: 100%;
     min-height: 370px;
+    max-height: 370px;
   }
   .program-text {
     padding: 10px 5%;
@@ -780,7 +798,13 @@ section img {
   .program-text p {
     margin: 10px auto;
   }
-  .testimonials .testimonials-box {
+  .testimonials {
+    padding: 0;
+  }
+  .testimonials-text {
+    padding-top: 20px;
+  }
+  testimonials-box {
     padding-left: 100px;
     padding-right: 40px;
   }
@@ -791,7 +815,7 @@ section img {
     height: 300px;
     width: 100%;
     max-width: 1200px;
-    margin-left: 120px;
+    margin-left: 100px;
   }
   .testimonials-box img {
     top: 25%;
@@ -804,8 +828,11 @@ section img {
 
 @media (min-width: 1280px) {
   header {
-    height: 110px;
+    height: 80px;
     padding: 0 70px 0 2%;
+  }
+  .logo-container img {
+    width: 200px;
   }
   nav {
     display: flex;
@@ -825,7 +852,7 @@ section img {
   }
   section.hack {
     /* width: 80%; */
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   section {
@@ -873,19 +900,24 @@ section img {
     margin-bottom: 150px;
   }
   .testimonials-box {
-    position: relative;
-    padding: 80px 20px 10px;
+    /* position: relative; */
+    padding: 50px 50px 40px;
     margin: 0 10px;
-    width: 32%;
-    max-width: 400px;
-    padding-top: 120px;
+    height: 100%;
+    width: 30%;
+    max-width: 450px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .testimonials-box img {
     width: 50%;
     max-width: 150px;
     height: 200px;
-    position: absolute;
-    top: -50px;
-    left: 30%;
+    position: unset;
+    margin-top: -120px;
+    /* position: absolute; */
+    /* top: -50px; */
+    /* left: 35%; */
   }
 }
